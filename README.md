@@ -11,7 +11,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="Module 2 - Basic C Programming">Module 2 - Basic C Programming</a></li>
   <li><a href="Module 3 - Variables, Constants, and Data Types">Module 3 - Variables, Constants, and Data Types</a></li>
   <li><a href="Module 4 - Operator">Module 4 - Operator</a></li>
-  <li>Module 5 - Flow Control (Decision Making)</li>
+  <li><a href="Module 5 - Flow Control (Decision Making)">Module 5 - Flow Control (Decision Making)</a></li>
   <li>Module 6 - Flow Control (Looping)</li>
   <li>Module 7 - Array</li>
   <li>Module 8 - Function and Procedure</li>
