@@ -7,15 +7,15 @@ This repository contains all programming algorithm practicum assignments. In thi
 
 ## Assignment Module
 <list>
-  <li><p>Module 1 - Introduction to Algorithms and Programming</p></li>
-  <li><p>Module 2 - Basic C Programming</p></li>
-  <li><p>Module 3 - Variables, Constants, and Data Types</p></li>
-  <li><p>Module 4 - Operator</p></li>
-  <li><p>Module 5 - Flow Control (Decision Making)</p></li>
-  <li><p>Module 6 - Flow Control (Looping)</p></li>
-  <li><p>Module 7 - Array</p></li>
-  <li><p>Module 8 - Function and Procedure</p></li>
-  <li><p>Module 9 - Pointer</p></li>
-  <li><p>Module 10 - Enumeration and Structures</p></li>
-  <li><p>Module 11 - File Handling in C</p></li>
+  <li>Module 1 - Introduction to Algorithms and Programming</li>
+  <li>Module 2 - Basic C Programming</li>
+  <li>Module 3 - Variables, Constants, and Data Types</li>
+  <li>Module 4 - Operator</li>
+  <li>Module 5 - Flow Control (Decision Making)</li>
+  <li>Module 6 - Flow Control (Looping)</li>
+  <li>Module 7 - Array</li>
+  <li>Module 8 - Function and Procedure</li>
+  <li>Module 9 - Pointer</li>
+  <li>Module 10 - Enumeration and Structures</li>
+  <li>Module 11 - File Handling in C</li>
 </list>
