@@ -7,7 +7,7 @@ This repository contains all programming algorithm practicum assignments. In thi
 
 ## Assignment Module
 <list>
-  <li>Module 1 - Introduction to Algorithms and Programming</li>
+  <li><a href="Module 1 - Introduction to Algorithms and Programming">Module 1 - Introduction to Algorithms and Programming</a></li>
   <li>Module 2 - Basic C Programming</li>
   <li>Module 3 - Variables, Constants, and Data Types</li>
   <li>Module 4 - Operator</li>
