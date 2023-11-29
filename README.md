@@ -16,6 +16,6 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="Module 7 - Array">Module 7 - Array</a></li>
   <li><a href="Module 8 - Function and Procedure">Module 8 - Function and Procedure</a></li>
   <li><a href="Module 9 - Pointer">Module 9 - Pointer</a></li>
-  <li>Module 10 - Enumeration and Structures</li>
+  <li><a href="Module 10 - Enumeration and Structures">Module 10 - Enumeration and Structures</a></li>
   <li>Module 11 - File Handling in C</li>
 </list>
