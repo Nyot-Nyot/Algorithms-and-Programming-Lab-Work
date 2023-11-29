@@ -15,6 +15,7 @@ Nilai UAS :<br>
 Nilai Akhir :<br>
 
 ---
+### Explain
 Program ini mengambil informasi mahasiswa, termasuk nama, NIM, program studi, fakultas, dan nilai. Kemudian program ini menghitung nilai akhir mahasiswa berdasarkan pembobotan tertentu untuk setiap kategori (0.3 untuk praktikum, 0.3 untuk UTS, dan 0.4 untuk UAS). Terakhir, aplikasi ini mencetak nilai akhir siswa.<br>
 
 Saya akan bahas langkah demi langkah:
