@@ -13,7 +13,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="Module 4 - Operator">Module 4 - Operator</a></li>
   <li><a href="Module 5 - Flow Control (Decision Making)">Module 5 - Flow Control (Decision Making)</a></li>
   <li><a href="Module 6 - Flow Control (Looping)">Module 6 - Flow Control (Looping)</a></li>
-  <li>Module 7 - Array</li>
+  <li><a href="Module 7 - Array">Module 7 - Array</a></li>
   <li>Module 8 - Function and Procedure</li>
   <li>Module 9 - Pointer</li>
   <li>Module 10 - Enumeration and Structures</li>
