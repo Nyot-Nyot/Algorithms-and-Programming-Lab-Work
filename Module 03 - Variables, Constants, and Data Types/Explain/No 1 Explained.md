@@ -1,38 +1,75 @@
 # Practice 1
-Buatlah sebuah program dengan algoritma berikut:
-- Program menampilkan tulisan “Hello, siapa nama lengkapmu?”
-- Pengguna menginputkan nama lengkap (nama)
-- Menampilkan pesan “Selamat Datang (nama) dalam Pemrograman C!”
+Buatlah sebuah program konversi mata uang Rupiah (Rp) ke mata uang Dollar ($)! jika, 1$ = Rp. 14.250.<br><br>
+Kasus:<br>
+Anda mempunyai jasa money changer, kemudian ada yang meminta penukaran uang rupiah ke dolar, berapa dollar yang harus anda berikan kepada si penukar untuk Rp. 2.500.000?<br>
+Hitung menggunakan program yang anda buat!<br>
 
 ---
 ### Explain
+Program C ini adalah konverter uang yang memungkinkan pengguna untuk mengonversi uang mereka dari Rupiah (IDR) ke Dolar (USD) atau sebaliknya. Program ini meminta pengguna untuk memilih jenis konversi dan memasukkan jumlah uang yang ingin dikonversi. Kemudian, aplikasi ini akan menghitung jumlah yang setara dalam mata uang lainnya.
+
+Berikut ini adalah rincian langkah demi langkah tentang cara kerja kode tersebut:<br><br>
 
 ```c
-#include <stdio.h>
+	char uang;
+	float rupiah, dollar;
 ```
-<p>Baris ini mencakup pustaka Standard Input/Output. Ini diperlukan untuk menggunakan fungsi printf dan scanf dalam program.</p><br>
+Program ini pertama-tama mendeklarasikan variabel dengan tipe data yang berbeda: char (untuk input pengguna), float (untuk jumlah mata uang).<br><br>
 
 ```c
-int main(){
-    char nama[50];
+	printf("Money changer:)\n");
+	printf("------------------------------------------------\n");
+	printf("Kamu mau menukar ke mata uang apa?\n");
+	printf("Pilih R untuk mengonversikan uang anda ke Rupiah\n");
+	printf("Pilih D untuk mengonversikan uang anda ke Dollar\n");
+	printf("ketik: r/d \n"); //r untuk rupiah sedangkan d untuk dollar
+	scanf("%s", &uang);
 ```
-<p>Fungsi main adalah titik awal program. Di dalam fungsi tersebut, sebuah array bernama "nama" dideklarasikan untuk menyimpan nama user. Ukuran array diatur ke 50, yang berarti dapat menyimpan hingga 50 karakter.</p><br>
+Program ini mencetak pesan selamat datang dan meminta pengguna untuk memilih jenis konversi. Pengguna diharapkan untuk memasukkan 'r' atau 'R' untuk Rupiah, dan 'd' atau 'D' untuk Dolar.<br>
+
+Program akan membaca input pengguna dan menyimpannya dalam variabel 'uang'.<br>
+
+Bergantung pada pilihan pengguna, program akan meminta mereka untuk memasukkan jumlah uang yang ingin dikonversi. Program akan membaca input pengguna dan menyimpannya dalam variabel 'rupiah' atau 'dollar'.<br><br>
 
 ```c
-    printf("Halo, siapa nama lengkapmu? \n");
-    printf("Nama: ");
-    scanf("%[^\n]s", &nama);
+	if (uang == 'r' || uang == 'R'){
+		printf("Masukkan jumlah uang Anda: $\n");	
+		scanf("%f", &rupiah);
+		rupiah = rupiah * 14250;
+		
+		if (rupiah == (int)rupiah){
+			printf("Uang anda dalam rupiah adalah %.0f", rupiah);
+		}
+		else {
+			printf("Uang anda dalam rupiah adalah %.3f", rupiah);
+		}
+	}
 ```
-<p>Baris-baris ini menampilkan pesan salam dan meminta user untuk memasukkan nama mereka. Fungsi scanf membaca masukan user dan menyimpannya dalam array "nama". Format specifier %[^\n] digunakan untuk membaca semua karakter sampai karakter baris baru ditemukan.</p><br>
+Jika pengguna memilih untuk mengonversi dari Rupiah ke Dolar, program akan menghitung jumlah yang setara dengan membagi jumlah Rupiah dengan 14250 (nilai tukar pada saat program ini ditulis). Hasilnya disimpan dalam variabel 'dollar'.<br><br>
 
 ```c
-    printf("Selamat datang %s dalam Pemograman C!", &nama);
+	else if (uang == 'd' || uang =='D'){
+		printf("Masukkan jumlah uang Anda: Rp\n");	
+		scanf("%f", &dollar);
+		dollar = dollar / 14250;
+		
+		if (dollar == (int)dollar){
+			printf("Uang anda dalam rupiah adalah %.0f", dollar);
+		}
+		else {
+			printf("Uang anda dalam rupiah adalah %.3f", dollar);
+		}
+	}
 ```
-<p>Baris ini mencetak pesan selamat datang yang diikuti dengan nama user. Operator "&nama" digunakan untuk mendapatkan alamat memori dari array nama.</p><br>
+Jika pengguna memilih untuk mengkonversi dari Dolar ke Rupiah, program akan menghitung jumlah yang setara dengan mengalikan jumlah Dolar dengan 14250 (nilai tukar pada saat penulisan). Hasilnya disimpan dalam variabel 'rupiah'.
 
+Program kemudian mencetak jumlah yang setara dalam mata uang lainnya. Jika jumlahnya adalah bilangan bulat, program akan mencetak angka tersebut tanpa desimal. Jika tidak, program akan mencetak angka tersebut dengan tiga angka di belakang koma.<br><br>
 
 ```c
-    return 0;
-}
+	else {
+		printf("Maaf, kami tidak melayani jenis uang tersebut :(");
+	}
 ```
-<p>Pernyataan "return 0;" menandai akhir dari fungsi main dan mengembalikan nilai 0 ke sistem operasi. Hal ini menandakan bahwa program telah berhasil dijalankan.</p><br>
+Jika pengguna memasukkan pilihan yang tidak didukung, program akan mencetak pesan kesalahan dan tidak melakukan konversi apa pun.<br>
+
+Catatan: Kode ini mengasumsikan nilai tukar statis 14.250 Rupiah ke 1 Dolar, yang mungkin tidak akurat secara real-time. Untuk aplikasi di dunia nyata, akan lebih baik menggunakan API atau library untuk mengambil nilai tukar saat ini.
