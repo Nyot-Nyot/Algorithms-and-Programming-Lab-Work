@@ -14,26 +14,26 @@ int main(){
 	
 	if (uang == 'r' || uang == 'R'){
 		printf("Masukkan jumlah uang Anda: $\n");	
-		scanf("%f", &rupiah);
-		rupiah = rupiah * 14250;
+		scanf("%f", &dollar);
+		dollar = dollar * 14250;
 		
-		if (rupiah == (int)rupiah){
-			printf("Uang anda dalam rupiah adalah %.0f", rupiah);
+		if (dollar == (int)dollar){
+			printf("Uang anda dalam rupiah adalah %.0f", dollar);
 		}
 		else {
-			printf("Uang anda dalam rupiah adalah %.3f", rupiah);
+			printf("Uang anda dalam rupiah adalah %.3f", dollar);
 		}
 	}
 	else if (uang == 'd' || uang =='D'){
 		printf("Masukkan jumlah uang Anda: Rp\n");	
-		scanf("%f", &dollar);
-		dollar = dollar / 14250;
+		scanf("%f", &rupiah);
+		rupiah = rupiah / 14250;
 		
-		if (dollar == (int)dollar){
-			printf("Uang anda dalam dollar adalah %.0f", dollar);
+		if (rupiah == (int)rupiah){
+			printf("Uang anda dalam dollar adalah %.0f", rupiah);
 		}
 		else {
-			printf("Uang anda dalam dollar adalah %.3f", dollar);
+			printf("Uang anda dalam dollar adalah %.3f", rupiah);
 		}
 	}
 	else {
