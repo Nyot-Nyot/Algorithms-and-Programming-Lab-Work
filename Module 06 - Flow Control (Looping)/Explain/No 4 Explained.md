@@ -115,10 +115,11 @@ Program ini merupakan simulasi sederhana dari sebuah mesin ATM dengan beberapa f
 Dengan cara ini, program menciptakan simulasi mesin ATM sederhana dengan beberapa opsi dasar untuk pengelolaan akun dan saldo.
 
 ### Screenshot program
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
+1. Skenario a)<br>
+   <img src="https://github.com/Nyot-Nyot/Algorithms-and-Programming-Lab-Work/blob/9ce3afdd7a7c4b7a880548938f6bc2091810e201/Module%2006%20-%20Flow%20Control%20(Looping)/files/Screenshot%201.png">
+
+2. Skenario b)<br>
+   <img src="https://github.com/Nyot-Nyot/Algorithms-and-Programming-Lab-Work/blob/9ce3afdd7a7c4b7a880548938f6bc2091810e201/Module%2006%20-%20Flow%20Control%20(Looping)/files/Screenshot%202.png">
+
+3. Skenario c)<br>
+   <img src="https://github.com/Nyot-Nyot/Algorithms-and-Programming-Lab-Work/blob/9ce3afdd7a7c4b7a880548938f6bc2091810e201/Module%2006%20-%20Flow%20Control%20(Looping)/files/Screenshot%203.png">
