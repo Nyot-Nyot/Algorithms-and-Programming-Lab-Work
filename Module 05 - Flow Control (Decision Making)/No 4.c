@@ -2,7 +2,7 @@
 
 int main(){
 	//deklarasi
-	char nama[1], prodi[1];
+	char nama[25], prodi[25];
 	int kehadiran, tugas, uts, uas ;
 	float akhir;
 	
