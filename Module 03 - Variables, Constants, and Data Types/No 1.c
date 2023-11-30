@@ -30,10 +30,10 @@ int main(){
 		dollar = dollar / 14250;
 		
 		if (dollar == (int)dollar){
-			printf("Uang anda dalam rupiah adalah %.0f", dollar);
+			printf("Uang anda dalam dollar adalah %.0f", dollar);
 		}
 		else {
-			printf("Uang anda dalam rupiah adalah %.3f", dollar);
+			printf("Uang anda dalam dollar adalah %.3f", dollar);
 		}
 	}
 	else {
