@@ -36,9 +36,27 @@ This repository contains all programming algorithm practicum assignments. In thi
 ---
 <h1 id="module2">Pemograman Dasar C</h1>
 
-- **Struktur Dasar C**: Program C terdiri dari dua bagian utama, yaitu bagian include dan blok fungsi main. Bagian include berisi perintah `#include` untuk memasukkan file header yang berisi definisi fungsi-fungsi bawaan C. Blok fungsi main berisi logika program yang akan dieksekusi pertama kali. Fungsi main harus mengembalikan nilai int, biasanya 0 untuk menandakan program berjalan dengan baik. Di dalam blok fungsi main, terdapat statement yang merupakan perintah-perintah atau fungsi untuk melakukan sesuatu. Setiap statement harus diakhiri dengan titik koma (`;`).
-- **Proses Input & Output**: Program C dapat menerima input dari perangkat inputan seperti keyboard, mouse, dll. dan menghasilkan output ke layar komputer atau perangkat output lainnya. Fungsi-fungsi dasar untuk input dan output adalah `printf()`, `scanf()`, `puts()`, `gets()`, dan `fgets()`. Fungsi `printf()` dan `puts()` digunakan untuk menampilkan output, sedangkan fungsi `scanf()`, `gets()`, dan `fgets()` digunakan untuk mengambil input. Fungsi-fungsi ini memerlukan format specifier untuk menentukan jenis tipe data yang akan ditampilkan atau diinputkan. Format specifier adalah simbol seperti `%d`, `%s`, `%f`, dll. yang menunjukkan tipe data desimal, string, pecahan, dll. Selain itu, terdapat juga escape sequence yang merupakan penulisan karakter khusus seperti `\n`, `\t`, dll. yang menunjukkan baris baru, tab, dll.
-- **Identifier**: Identifier adalah nama yang digunakan untuk mengidentifikasi variabel, fungsi, atau item lain yang didefinisikan oleh programmer. Ada beberapa aturan dalam menuliskan identifier, yaitu harus diawali dengan huruf atau underscore (`_`), tidak boleh menggunakan karakter selain huruf, angka, atau underscore, bersifat case sensitive, dan harus unik. Identifier digunakan untuk memberi nama yang mudah dipahami dan tidak membingungkan bagi programmer.
+### Pemahaman Struktur Dasar Bahasa Pemrograman C
+
+Ketika kamu mulai belajar bahasa C, ada beberapa hal dasar yang perlu kamu ketahui. Pertama-tama, setiap program C memiliki struktur yang terbagi menjadi dua bagian utama: bagian `#include` dan blok fungsi `main`.
+
+**#Include dan Header Files**<br>
+Di awal kode, kamu akan melihat `#include`. Ini bukan sekadar hiasan, tapi perintah penting yang memungkinkan kita menggunakan berbagai fitur tambahan dalam C. Misalnya, `stdio.h` adalah header file yang berisi deklarasi fungsi-fungsi dasar seperti `printf()`, yang kita gunakan untuk mencetak teks ke terminal.
+
+**Fungsi Main**<br>
+Fungsi `main()` adalah jantung dari program C. Ini adalah tempat pertama yang dijalankan saat program dimulai. Di sinilah logika program ditulis. Jika kamu melihat `int` sebelum `main`, itu menunjukkan tipe data yang dikembalikan oleh fungsi ini. Biasanya, kita menuliskan `return 0;` di akhir fungsi `main` untuk menandakan bahwa program berjalan dengan sukses.
+
+**Statement dan Semicolons**<br>
+Setiap instruksi dalam C diakhiri dengan semicolon (`;`). Ini seperti tanda titik di akhir kalimat yang memberitahu kompiler bahwa kamu telah selesai memberikan instruksi.
+
+**Identifier**<br>
+Identifier adalah nama unik yang kamu berikan untuk variabel, fungsi, atau item lainnya. Ada aturan tertentu dalam penamaannya, seperti harus diawali dengan huruf atau underscore, dan tidak boleh mengandung karakter khusus seperti `!`, `$`, `%`, dll.
+
+**Comments dan Whitespaces**<br>
+Komentar dalam kode sangat berguna untuk menjelaskan fungsi dari baris kode tertentu. Whitespaces seperti spasi, tab, dan baris baru membantu memisahkan elemen dalam statement agar mudah dibaca oleh kompiler.
+
+**Proses Input & Output**<br>
+Dalam C, kita menggunakan fungsi seperti `printf()` dan `scanf()` untuk output dan input. `printf()` digunakan untuk mencetak teks ke layar, sementara `scanf()` digunakan untuk mengambil input dari pengguna.
 
 ---
 <h1 id="module3">Variabel, Konstanta, & Tipe Data</h1>
