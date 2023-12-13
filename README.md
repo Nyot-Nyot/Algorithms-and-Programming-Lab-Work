@@ -1,3 +1,5 @@
+theme: jekyll-theme-hacker
+
 # Algorithms and Programming Lab Work
 
 ## Description
