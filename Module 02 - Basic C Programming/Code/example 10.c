@@ -1,3 +1,9 @@
+/*
+    Nama: Dzaki Sultan Rabbani
+    NIM: 23343035
+    Prodi: Informatika
+*/
+
 #include <stdio.h>
 
 int main(){
@@ -11,7 +17,7 @@ int main(){
 
     c = a + b;
 
-    printf("Hasil %i + %i = %i", a, b, c);
+    printf("Hasil %i + %i = %i\n", a, b, c);
 
     return 0;
 }
