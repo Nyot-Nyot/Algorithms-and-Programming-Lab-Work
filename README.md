@@ -12,7 +12,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="#module1">Module 01 - Introduction to Algorithms and Programming</a></li>
   <li><a href="#module2">Module 02 - Basic C Programming</a></li>
   <li><a href="#module3">Module 03 - Variables, Constants, and Data Types</a></li>
-  <li><a href="Module 04 - Operator">Module 04 - Operator</a></li>
+  <li><a href="#module4">Module 04 - Operator</a></li>
   <li><a href="Module 05 - Flow Control (Decision Making)">Module 05 - Flow Control (Decision Making)</a></li>
   <li><a href="Module 06 - Flow Control (Looping)">Module 06 - Flow Control (Looping)</a></li>
   <li><a href="Module 07 - Array">Module 07 - Array</a></li>
@@ -74,8 +74,38 @@ Ada beberapa tipe data dasar di C:
 **Type Casting**<br>
 Type casting itu seperti mengubah air menjadi es agar bisa disimpan dalam kardus. Di C, kita bisa mengubah tipe data dengan menuliskan tipe baru di depan nilai atau variabel, contohnya `(float)10` akan mengubah angka 10 menjadi tipe float.
 
-**Keywords**
+**Keywords**<br>
 Ada kata-kata tertentu dalam C yang punya makna khusus dan tidak bisa digunakan sebagai nama variabel, seperti `if`, `int`, dan `void`.
 
-**Konstanta**
+**Konstanta**<br>
 Konstanta itu seperti variabel, tapi nilainya tetap dan tidak bisa diubah. Di C, kita bisa membuat konstanta dengan `#define` atau `const`.
+
+---
+<h1 id="module4">Operator</h1>
+
+**Operator dalam Pemrograman**<br>
+Operator adalah simbol-simbol yang digunakan untuk melakukan operasi tertentu pada operand dalam pemrograman. Operand adalah nilai atau variabel yang menjadi sasaran operasi. Operator dapat membantu programmer untuk mengolah data, membandingkan nilai, membuat kondisi, dan lain-lain.
+
+**Jenis-Jenis Operator**<br>
+- **Unary**: Operator yang hanya memerlukan satu operand. Contoh: operator negasi (`!`).
+- **Binary**: Operator yang memerlukan dua operand. Contoh: operator penjumlahan (`+`).
+- **Ternary**: Operator yang memerlukan tiga operand. Contoh: operator kondisional (`?:`).
+
+**Operator Aritmatika**<br>
+Operator aritmatika adalah operator yang digunakan untuk melakukan perhitungan matematika dasar. Ada lima operator aritmatika, yaitu penjumlahan (`+`), pengurangan (`-`), perkalian (`*`), pembagian (`/`), dan modulus (`%`). Modulus adalah operator yang menghasilkan sisa pembagian dua bilangan. Fakta menarik: jika dua bilangan integer dibagi dengan operator pembagian, hasilnya juga akan berupa integer, bukan bilangan pecahan. Misalnya, `7 / 2` menghasilkan `3`, bukan `3.5`. Untuk mendapatkan hasil pecahan, salah satu operand harus berupa bilangan riil (float).
+
+**Operator Penugasan**<br>
+Operator penugasan adalah operator yang digunakan untuk memberikan nilai kepada variabel. Ada berbagai macam operator penugasan, mulai dari yang sederhana seperti operator sama dengan (`=`) hingga yang lebih kompleks seperti operator shift right (`>>=`). Operator penugasan dapat digunakan untuk mempersingkat penulisan kode. Misalnya, `a += b` sama artinya dengan `a = a + b`.
+
+**Operator Pembanding**<br>
+Operator pembanding adalah operator yang digunakan untuk membandingkan dua nilai atau ekspresi. Ada enam operator pembanding, yaitu lebih besar (`>`), lebih kecil (`<`), sama dengan (`==`), tidak sama dengan (`!=`), lebih besar atau sama dengan (`>=`), dan lebih kecil atau sama dengan (`<=`). Operator pembanding menghasilkan nilai boolean, yaitu `true` atau `false`.
+
+**Operator Logika**<br>
+Operator logika adalah operator yang digunakan untuk menggabungkan dua atau lebih pernyataan boolean. Ada tiga operator logika, yaitu AND (`&&`), OR (`||`), dan XOR (`^`). Operator logika mengikuti tabel kebenaran logika matematika. Misalnya, `A && B` bernilai `true` jika dan hanya jika `A` dan `B` keduanya bernilai `true`.
+
+**Operator Bitwise**<br>
+Operator bitwise adalah operator yang digunakan untuk melakukan operasi bit per bit pada bilangan biner. Ada tujuh operator bitwise, yaitu AND (`&`), OR (`|`), XOR (`^`), NOT (`~`), shift left (`<<`), shift right (`>>`), dan rotate right (`>>>`). Operator bitwise dapat digunakan untuk mengoptimalkan kinerja dan memori program.
+
+**Operator Lainnya**<br>
+Ada juga operator lain yang memiliki fungsi khusus dalam pemrograman, seperti operator alamat (`&`), operator pointer (`*`), operator increment (`++`), operator decrement (`--`), dan operator sizeof (`sizeof`). Operator-operator ini dapat membantu programmer untuk mengakses dan mengubah nilai variabel, pointer, dan tipe data.
+
