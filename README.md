@@ -26,7 +26,7 @@ This repository contains all programming algorithm practicum assignments. In thi
 </list>
 
 ---
-<h1 id="module1">Pengantar Algoritma Pemograman</h1>
+<h2 id="module1">Pengantar Algoritma Pemograman</h2>
 
 - **Algoritma**: Urutan langkah yang sistematis dan logis untuk memecahkan masalah atau mencapai tujuan. Algoritma memiliki enam karakteristik penting, seperti keterbatasan, kepastian, input, output, efektivitas, dan struktur.
 
@@ -37,10 +37,9 @@ This repository contains all programming algorithm practicum assignments. In thi
 - **IDE**: Integrated Development Environment, sebuah software yang membantu programmer untuk menulis, menguji, dan menjalankan kode dalam satu aplikasi. IDE memiliki banyak fitur, seperti text editor, compiler, debugger, syntax highlighting, code completion, dll. Beberapa contoh IDE adalah DevC++, Visual Studio Code, CodeBlocks, dll.
 
 ---
-<h1 id="module2">Pemograman Dasar C</h1>
+<h2 id="module2">Pemograman Dasar C</h2>
 
-### Pemahaman Struktur Dasar Bahasa Pemrograman C
-
+**Pemahaman Struktur Dasar Bahasa Pemrograman C**<br>
 Ketika kamu mulai belajar bahasa C, ada beberapa hal dasar yang perlu kamu ketahui. Pertama-tama, setiap program C memiliki struktur yang terbagi menjadi dua bagian utama: bagian `#include` dan blok fungsi `main`.
 
 **#Include dan Header Files**<br>
@@ -62,7 +61,7 @@ Komentar dalam kode sangat berguna untuk menjelaskan fungsi dari baris kode tert
 Dalam C, kita menggunakan fungsi seperti `printf()` dan `scanf()` untuk output dan input. `printf()` digunakan untuk mencetak teks ke layar, sementara `scanf()` digunakan untuk mengambil input dari pengguna.
 
 ---
-<h1 id="module3">Variabel, Konstanta, & Tipe Data</h1>
+<h2 id="module3">Variabel, Konstanta, & Tipe Data</h2>
 
 **Variabel dan Konstanta**<br>
 Bayangkan variabel sebagai kotak di mana kita menyimpan barang-barang, dan tipe data sebagai jenis barang yang bisa kita simpan di dalamnya. Di C, kita mendeklarasikan variabel dengan menulis tipe data diikuti oleh nama variabel. Misalnya, `int tinggi;` berarti kita punya kotak bernama 'tinggi' untuk menyimpan angka bulat.
@@ -84,7 +83,7 @@ Ada kata-kata tertentu dalam C yang punya makna khusus dan tidak bisa digunakan 
 Konstanta itu seperti variabel, tapi nilainya tetap dan tidak bisa diubah. Di C, kita bisa membuat konstanta dengan `#define` atau `const`.
 
 ---
-<h1 id="module4">Operator</h1>
+<h2 id="module4">Operator</h2>
 
 **Operator dalam Pemrograman**<br>
 Operator adalah simbol-simbol yang digunakan untuk melakukan operasi tertentu pada operand dalam pemrograman. Operand adalah nilai atau variabel yang menjadi sasaran operasi. Operator dapat membantu programmer untuk mengolah data, membandingkan nilai, membuat kondisi, dan lain-lain.
