@@ -1,13 +1,11 @@
 # Algorithms and Programming Lab Work
 This repository contains all programming algorithm practicum assignments. In this course students learn about the principles, concepts and methods in solving computational problems that will be used in making a simple application. Students learn the basic concepts of computers and computer systems, writing program algorithms, data types, identifiers, operators, program structure, modular programming, functions and procedures as well as searching and sorting data.
 
----
 🧑‍🏫️ Lecturer: Randi Proska Sandra, M.Sc<br>
 🎒️ Class code: INF1.62.1008<br>
 👨‍🎓️ Student: Dzaki Sultan Rabbani<br>
 🔢️ NIM: 23343035<br>
 🏫️ major: Informatics<br>
----
 
 ## Assignment Module
 <list>
@@ -24,6 +22,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="Module 11 - File Handling in C">Module 11 - File Handling in C</a></li>
 </list>
 
+---
 <h1 id="module1">Pengantar Algoritma Pemograman</h1>
 
 - **Algoritma**: Urutan langkah yang sistematis dan logis untuk memecahkan masalah atau mencapai tujuan. Algoritma memiliki enam karakteristik penting, seperti keterbatasan, kepastian, input, output, efektivitas, dan struktur.
