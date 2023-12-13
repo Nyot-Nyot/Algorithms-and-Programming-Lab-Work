@@ -61,14 +61,21 @@ Dalam C, kita menggunakan fungsi seperti `printf()` dan `scanf()` untuk output d
 ---
 <h1 id="module3">Variabel, Konstanta, & Tipe Data</h1>
 
-- **Variabel & Konstanta**
-  Variabel adalah tempat penyimpanan nilai yang tipe datanya ditentukan oleh jenis nilai yang akan disimpan. Nilai variabel dapat berubah-ubah selama program berjalan. Konstanta adalah nilai tetap yang tidak bisa diubah selama program berjalan. Nilai konstanta harus didefinisikan saat deklarasi variabel dan tidak dapat diubah kemudian.
+**Variabel dan Konstanta**<br>
+Bayangkan variabel sebagai kotak di mana kita menyimpan barang-barang, dan tipe data sebagai jenis barang yang bisa kita simpan di dalamnya. Di C, kita mendeklarasikan variabel dengan menulis tipe data diikuti oleh nama variabel. Misalnya, `int tinggi;` berarti kita punya kotak bernama 'tinggi' untuk menyimpan angka bulat.
 
-- **Tipe Data Fundamental**
-  Terdapat delapan jenis tipe data dalam bahasa pemrograman C, yaitu: Char, Unsigned Char, Signed Char, Integer, Unsigned Integer, Short, Unsigned Short, Long, Unsigned Long, Float, dan Double. Masing-masing tipe data memiliki karakteristik dan ukuran penyimpanan yang berbeda. Ukuran penyimpanan tipe data dapat bervariasi tergantung pada arsitektur komputer yang digunakan. Tipe data Char digunakan untuk menyimpan karakter tunggal, seperti huruf atau angka. Tipe data Integer digunakan untuk menyimpan bilangan bulat, baik positif maupun negatif. Tipe data Float dan Double digunakan untuk menyimpan bilangan pecahan, dengan tingkat presisi yang berbeda.
+**Tipe Data Fundamental**<br>
+Ada beberapa tipe data dasar di C:
+- **Char**: Untuk menyimpan satu huruf atau karakter.
+- **Integer**: Untuk angka bulat.
+- **Float**: Untuk bilangan pecahan.
+- **Double**: Sama seperti float, tapi dengan kapasitas penyimpanan yang lebih besar.
 
-- **Type Casting**
-  Type casting adalah proses mengubah tipe data satu variabel ke tipe data lain, baik secara implisit maupun eksplisit. Type casting dibutuhkan ketika kita ingin melakukan operasi matematika atau logika antara variabel dengan tipe data yang berbeda. Misalnya, jika kita ingin mengubah integer menjadi float untuk memungkinkan operasi pembagian yang lebih kompleks, kita dapat menggunakan sintaks seperti ini: `float hasil = (float) a / (float) b;`
+**Type Casting**<br>
+Type casting itu seperti mengubah air menjadi es agar bisa disimpan dalam kardus. Di C, kita bisa mengubah tipe data dengan menuliskan tipe baru di depan nilai atau variabel, contohnya `(float)10` akan mengubah angka 10 menjadi tipe float.
 
-- **Keywords**
-  Kata kunci adalah kata yang sudah dipesan oleh bahasa pemrograman dan tidak dapat digunakan sebagai nama variabel, konstanta, fungsi, atau struktur. Kata kunci memiliki makna khusus yang ditentukan oleh bahasa pemrograman dan digunakan untuk mengontrol alur program. Beberapa contoh kata kunci dalam bahasa pemrograman C adalah: if, else, for, while, switch, case, break, continue, return, void, int, char, dan lain-lain.
+**Keywords**
+Ada kata-kata tertentu dalam C yang punya makna khusus dan tidak bisa digunakan sebagai nama variabel, seperti `if`, `int`, dan `void`.
+
+**Konstanta**
+Konstanta itu seperti variabel, tapi nilainya tetap dan tidak bisa diubah. Di C, kita bisa membuat konstanta dengan `#define` atau `const`.
