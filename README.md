@@ -12,7 +12,7 @@ This repository contains all programming algorithm practicum assignments. In thi
 ## Assignment Module
 <list>
   <li><a href="#module1">Module 01 - Introduction to Algorithms and Programming</a></li>
-  <li><a href="Module 02 - Basic C Programming">Module 02 - Basic C Programming</a></li>
+  <li><a href="#module2">Module 02 - Basic C Programming</a></li>
   <li><a href="Module 03 - Variables, Constants, and Data Types">Module 03 - Variables, Constants, and Data Types</a></li>
   <li><a href="Module 04 - Operator">Module 04 - Operator</a></li>
   <li><a href="Module 05 - Flow Control (Decision Making)">Module 05 - Flow Control (Decision Making)</a></li>
@@ -33,3 +33,5 @@ This repository contains all programming algorithm practicum assignments. In thi
 - **Bahasa C**: Bahasa pemrograman untuk tujuan umum dan imperatif yang mendukung pemrograman terstruktur dan rekursif. C diciptakan oleh Dennis Ritchie pada tahun 1969-1973 di Bell Labs untuk mengembangkan sistem operasi Unix. C digunakan secara luas, portabel, fleksibel, dan berpengaruh terhadap banyak bahasa lain.
 
 - **IDE**: Integrated Development Environment, sebuah software yang membantu programmer untuk menulis, menguji, dan menjalankan kode dalam satu aplikasi. IDE memiliki banyak fitur, seperti text editor, compiler, debugger, syntax highlighting, code completion, dll. Beberapa contoh IDE adalah DevC++, Visual Studio Code, CodeBlocks, dll.
+
+<h1 id="module2">Pemograman Dasar C</h1>
