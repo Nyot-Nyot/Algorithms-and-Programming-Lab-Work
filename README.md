@@ -20,7 +20,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="#module5">Module 05 - Flow Control (Decision Making)</a></li>
   <li><a href="#module6">Module 06 - Flow Control (Looping)</a></li>
   <li><a href="#module7">Module 07 - Array</a></li>
-  <li><a href="Module 08 - Function and Procedure">Module 08 - Function and Procedure</a></li>
+  <li><a href="#module8">Module 08 - Function and Procedure</a></li>
   <li><a href="Module 09 - Pointer">Module 09 - Pointer</a></li>
   <li><a href="Module 10 - Enumeration and Structures">Module 10 - Enumeration and Structures</a></li>
   <li><a href="Module 11 - File Handling in C">Module 11 - File Handling in C</a></li>
@@ -298,3 +298,254 @@ char s[6] = "Hello";
 
 Perhatikan bahwa ukuran array harus satu lebih besar dari panjang string, karena string selalu diakhiri dengan karakter null (\0) yang menandakan akhir string.
 
+---
+<h2 id="module8">Fungsi & Prosedur</h2>
+
+**Fungsi dan Prosedur dalam Bahasa C**
+
+Fungsi dan prosedur adalah dua konsep penting dalam pemrograman, khususnya dalam bahasa C. Fungsi dan prosedur memungkinkan kita untuk membuat sub-program yang bisa digunakan kembali di berbagai tempat, tanpa harus menulis ulang kode yang sama. Fungsi dan prosedur juga membantu kita untuk membuat program yang lebih rapi, modular, dan mudah dipahami.
+
+**Apa itu Fungsi?**
+
+Fungsi adalah sub-program yang memiliki nama, parameter, dan nilai kembalian. Parameter adalah variabel yang digunakan untuk menerima input dari pemanggil fungsi. Nilai kembalian adalah hasil yang dikirimkan oleh fungsi ke pemanggil fungsi. Fungsi bisa dipanggil berkali-kali dari tempat yang berbeda dalam program.
+
+Contoh fungsi yang paling sering kita buat dan panggil adalah fungsi main(). Fungsi ini adalah fungsi utama yang akan dieksekusi pertama kali oleh program C. Fungsi main() biasanya tidak memiliki parameter dan nilai kembalian, sehingga kita menggunakan tipe data void untuk menyatakannya.
+
+```c
+#include <stdio.h>
+
+void main() {
+  // kode program utama
+}
+```
+
+**Bagaimana Cara Membuat dan Memanggil Fungsi?**
+
+Untuk membuat fungsi, kita harus menentukan tipe data untuk nilai kembalian, nama fungsi, dan parameter (jika ada). Kemudian kita harus menulis kode yang akan dijalankan oleh fungsi di dalam kurung kurawal. Untuk mengembalikan nilai, kita bisa menggunakan kata kunci return diikuti dengan nilai yang ingin dikembalikan.
+
+Contoh:
+
+```c
+// fungsi untuk menghitung luas lingkaran
+double luas(double r) {
+  // r adalah parameter berupa jari-jari lingkaran
+  // konstanta PI
+  const double PI = 3.14;
+  // menghitung luas
+  double L = PI * r * r;
+  // mengembalikan nilai luas
+  return L;
+}
+```
+
+Untuk memanggil fungsi, kita harus menulis nama fungsi diikuti dengan tanda kurung dan nilai yang ingin kita berikan ke parameter (jika ada). Nilai yang kita berikan ke parameter disebut argumen. Kita bisa menyimpan nilai kembalian dari fungsi ke dalam variabel atau langsung menggunakannya untuk operasi lain.
+
+Contoh:
+
+```c
+#include <stdio.h>
+
+// fungsi luas lingkaran
+double luas(double r) {
+  const double PI = 3.14;
+  double L = PI * r * r;
+  return L;
+}
+
+void main() {
+  // memanggil fungsi luas dengan argumen 10
+  double L1 = luas(10);
+  // mencetak nilai kembalian
+  printf("Luas lingkaran dengan jari-jari 10 adalah %.2f\n", L1);
+  // memanggil fungsi luas dengan argumen 5
+  double L2 = luas(5);
+  // mencetak nilai kembalian
+  printf("Luas lingkaran dengan jari-jari 5 adalah %.2f\n", L2);
+  // memanggil fungsi luas dengan argumen 7 dan menggunakannya untuk operasi pembagian
+  printf("Rasio luas lingkaran dengan jari-jari 10 dan 7 adalah %.2f\n", luas(10) / luas(7));
+}
+```
+
+Hasil:
+
+```
+Luas lingkaran dengan jari-jari 10 adalah 314.00
+Luas lingkaran dengan jari-jari 5 adalah 78.50
+Rasio luas lingkaran dengan jari-jari 10 dan 7 adalah 2.00
+```
+
+**Apa itu Fungsi Rekursif?**
+
+Fungsi rekursif adalah fungsi yang memanggil dirinya sendiri di dalam tubuh fungsi. Fungsi rekursif biasanya digunakan untuk menyelesaikan masalah yang memiliki pola berulang atau bisa dibagi menjadi sub-masalah yang lebih kecil. Fungsi rekursif harus memiliki kondisi berhenti (base case) untuk menghindari looping tanpa akhir.
+
+Contoh fungsi rekursif adalah fungsi untuk menghitung faktorial dari sebuah bilangan. Faktorial dari n adalah hasil perkalian dari 1 sampai n. Rumusnya adalah:
+
+`n! = n x (n-1) x (n-2) x ... x 2 x 1`
+
+Contoh:
+
+`5! = 5 x 4 x 3 x 2 x 1 = 120`
+
+Fungsi rekursif untuk menghitung faktorial adalah:
+
+```c
+// fungsi untuk menghitung faktorial
+int faktorial(int n) {
+  // n adalah parameter berupa bilangan bulat positif
+  // kondisi berhenti jika n = 0 atau n = 1
+  if (n == 0 || n == 1) {
+    return 1;
+  }
+  // rekursi dengan memanggil fungsi faktorial dengan argumen n-1
+  else {
+    return n * faktorial(n-1);
+  }
+}
+```
+
+**Apa itu Variabel Lokal dan Variabel Global?**
+
+Variabel lokal dan variabel global adalah dua jenis variabel yang berbeda dalam cakupan dan ruang lingkupnya. Variabel lokal adalah variabel yang hanya bisa diakses dari dalam fungsi tempat variabel itu dideklarasikan. Variabel global adalah variabel yang bisa diakses dari semua fungsi dalam program.
+
+Contoh:
+
+```c
+#include <stdio.h>
+
+// variabel global
+int x = 10;
+
+// fungsi untuk menampilkan nilai x
+void tampil() {
+  // variabel lokal
+  int x = 20;
+  // mencetak nilai x lokal
+  printf("Nilai x lokal adalah %d\n", x);
+}
+
+void main() {
+  // memanggil fungsi tampil
+  tampil();
+  // mencetak nilai x global
+  printf("Nilai x global adalah %d\n", x);
+}
+```
+
+Hasil:
+
+```
+Nilai x lokal adalah 20
+Nilai x global adalah 10
+```
+
+**Apa itu Pass by Value dan Pass by Reference?**
+
+Pass by value dan pass by reference adalah dua cara untuk memberikan nilai ke parameter fungsi. Pass by value berarti kita memberikan nilai langsung ke parameter, sehingga parameter akan memiliki salinan dari nilai tersebut. Perubahan yang terjadi pada parameter tidak akan mempengaruhi nilai aslinya.
+
+Pass by reference berarti kita memberikan alamat memori dari nilai ke parameter, sehingga parameter akan menunjuk ke lokasi yang sama dengan nilai tersebut. Perubahan yang terjadi pada parameter akan mempengaruhi nilai aslinya.
+
+Contoh:
+
+```c
+#include <stdio.h>
+
+// fungsi untuk menukar nilai dua variabel dengan pass by value
+void tukar_value(int a, int b) {
+  // a dan b adalah parameter yang menerima salinan dari nilai variabel
+  // membuat variabel sementara untuk menyimpan nilai a
+  int temp = a;
+  // menukar nilai a dengan b
+  a = b;
+  // menukar nilai b dengan temp
+  b = temp;
+  // mencetak nilai a dan b setelah ditukar
+  printf("Nilai a dan b di dalam fungsi tukar_value adalah %d dan %d\n", a, b);
+}
+
+// fungsi untuk menukar nilai dua variabel dengan pass by reference
+void tukar_reference(int *a, int *b) {
+  // a dan b adalah parameter yang menerima alamat memori dari variabel
+  // membuat variabel sementara untuk menyimpan nilai a
+  int temp = *a;
+  // menukar nilai a dengan b
+  *a = *b;
+  // menukar nilai b dengan temp
+  *b = temp;
+  // mencetak nilai a dan b setelah ditukar
+  printf("Nilai a dan b di dalam fungsi tukar_reference adalah %d dan %d\n", *a, *b);
+}
+
+void main() {
+  // membuat variabel x dan y
+  int x = 10;
+  int y = 20;
+  // mencetak nilai x dan y sebelum ditukar
+  printf("Nilai x dan y sebelum ditukar adalah %d dan %d\n", x, y);
+  // memanggil fungsi tukar_value dengan argumen x dan y
+  tukar_value(x, y);
+  // mencetak nilai x dan y setelah ditukar dengan pass by value
+  printf("Nilai x dan y setelah ditukar dengan pass by value adalah %d dan %d\n", x, y);
+  // memanggil fungsi tukar_reference dengan argumen alamat memori dari x dan y
+  tukar_reference(&x, &y);
+  // mencetak nilai x dan y setelah ditukar dengan pass by reference
+  printf("Nilai x dan y setelah ditukar dengan pass by reference adalah %d dan %d\n", x, y);
+}
+```
+
+Hasil:
+
+```
+Nilai x dan y sebelum ditukar adalah 10 dan 20
+Nilai x dan y di dalam fungsi tukar_value adalah 20 dan 10
+Nilai x dan y setelah ditukar dengan pass by value adalah 10 dan 20
+Nilai x dan b di dalam fungsi tukar_reference adalah 20 dan 10
+Nilai x dan y setelah ditukar dengan pass by reference adalah 20 dan 10
+```
+
+Dari hasil di atas, kita bisa melihat bahwa pass by value tidak mengubah nilai asli dari variabel, sedangkan pass by reference mengubah nilai asli dari variabel. Hal ini karena pass by value hanya mengoperasikan salinan dari nilai, sedangkan pass by reference mengoperasikan nilai yang sebenarnya.
+
+**Apa itu Prosedur?**
+
+Prosedur adalah sub-program yang memiliki nama dan parameter, tetapi tidak memiliki nilai kembalian. Prosedur biasanya digunakan untuk melakukan tugas-tugas tertentu yang tidak memerlukan hasil, seperti mencetak pesan, mengatur warna, atau menggambar grafik. Prosedur bisa dipanggil berkali-kali dari tempat yang berbeda dalam program.
+
+**Bagaimana Cara Membuat dan Memanggil Prosedur?**
+
+Untuk membuat prosedur, kita harus menentukan nama prosedur dan parameter (jika ada). Kemudian kita harus menulis kode yang akan dijalankan oleh prosedur di dalam kurung kurawal. Kita tidak perlu menggunakan kata kunci return untuk mengakhiri prosedur.
+
+Contoh prosedur untuk mencetak pesan selamat datang adalah:
+
+```c
+// prosedur untuk mencetak pesan selamat datang
+void sapa() {
+  // mencetak pesan
+  printf("Selamat datang di Github!\n");
+}
+```
+
+Untuk memanggil prosedur, kita harus menulis nama prosedur diikuti dengan tanda kurung dan nilai yang ingin kita berikan ke parameter (jika ada). Nilai yang kita berikan ke parameter disebut argumen. Kita tidak bisa menyimpan atau menggunakkan hasil dari prosedur, karena prosedur tidak mengembalikan nilai.
+
+Contoh:
+
+```c
+#include <stdio.h>
+
+// prosedur untuk mencetak pesan selamat datang
+void sapa() {
+  // mencetak pesan
+  printf("Selamat datang di Github!\n");
+}
+
+void main() {
+  // memanggil prosedur sapa tanpa argumen
+  sapa();
+  // memanggil prosedur sapa lagi
+  sapa();
+}
+```
+
+Hasil:
+
+```
+Selamat datang di Github!
+Selamat datang di Github!
+```
