@@ -23,7 +23,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="#module8">Module 08 - Function and Procedure</a></li>
   <li><a href="#module9">Module 09 - Pointer</a></li>
   <li><a href="#module10">Module 10 - Enumeration and Structures</a></li>
-  <li><a href="Module 11 - File Handling in C">Module 11 - File Handling in C</a></li>
+  <li><a href="#module11">Module 11 - File Handling in C</a></li>
 </list>
 
 ---
@@ -1006,3 +1006,149 @@ HP: 7896543
 <div align="center">
   <a href="#navigator"><kbd> <br> Go Back <br> </kbd></a>
 </div>
+
+---
+<h1 id="module11">File Handling</h1>
+
+File adalah salah satu cara untuk menyimpan data secara permanen di komputer. File bisa berupa teks atau binary, tergantung pada format dan isi datanya. Dalam bahasa C, kita bisa membaca dan menulis data ke file dengan menggunakan beberapa fungsi bawaan, seperti fopen(), fclose(), fgets(), dan fputs().
+
+Untuk membaca file, kita perlu membuka file tersebut dengan fungsi fopen() dan memberikan mode yang sesuai, misalnya "r" untuk read atau baca saja. Fungsi fopen() akan mengembalikan sebuah pointer yang menunjuk ke file yang dibuka. Jika file tidak ada atau tidak bisa dibuka, maka pointer akan bernilai NULL.
+
+Contoh kode untuk membuka file teks bernama puisi.txt:
+
+```c
+#include <stdio.h>
+
+int main() {
+  // buat pointer untuk file
+  FILE *fptr;
+
+  // buka file dengan mode read
+  fptr = fopen("puisi.txt", "r");
+
+  // cek apakah file berhasil dibuka
+  if (fptr == NULL) {
+    printf("File tidak bisa dibuka.\n");
+    return 1;
+  }
+
+  // lakukan operasi baca file di sini
+
+  // tutup file
+  fclose(fptr);
+
+  return 0;
+}
+```
+
+Untuk membaca isi file, kita bisa menggunakan fungsi fgets() yang akan membaca satu baris teks dari file dan menyimpannya ke dalam sebuah variabel. Fungsi fgets() membutuhkan tiga parameter, yaitu variabel yang akan menampung teks, panjang maksimal teks yang akan dibaca, dan pointer file yang menunjuk ke file yang dibuka.
+
+Contoh kode untuk membaca dan menampilkan isi file puisi.txt:
+
+```c
+#include <stdio.h>
+
+int main() {
+  // buat pointer untuk file
+  FILE *fptr;
+
+  // buat variabel untuk menampung teks
+  char buff[255];
+
+  // buka file dengan mode read
+  fptr = fopen("puisi.txt", "r");
+
+  // cek apakah file berhasil dibuka
+  if (fptr == NULL) {
+    printf("File tidak bisa dibuka.\n");
+    return 1;
+  }
+
+  // baca dan tampilkan isi file
+  while (fgets(buff, sizeof(buff), fptr) != NULL) {
+    printf("%s", buff);
+  }
+
+  // tutup file
+  fclose(fptr);
+
+  return 0;
+}
+```
+
+Untuk menulis file, kita perlu membuka file tersebut dengan fungsi fopen() dan memberikan mode yang sesuai, misalnya "w" untuk write atau tulis saja. Fungsi fopen() akan mengembalikan sebuah pointer yang menunjuk ke file yang dibuka. Jika file tidak ada, maka file akan dibuat baru. Jika file sudah ada, maka isi file akan ditimpa.
+
+Contoh kode untuk menulis teks ke file puisi.txt:
+
+```c
+#include <stdio.h>
+
+int main() {
+  // buat pointer untuk file
+  FILE *fptr;
+
+  // buka file dengan mode write
+  fptr = fopen("puisi.txt", "w");
+
+  // cek apakah file berhasil dibuka
+  if (fptr == NULL) {
+    printf("File tidak bisa dibuka.\n");
+    return 1;
+  }
+
+  // tulis teks ke file
+  fputs("Aku ingin menjadi pelangi\n", fptr);
+  fputs("Yang mewarnai hidupmu\n", fptr);
+  fputs("Aku ingin menjadi bintang\n", fptr);
+  fputs("Yang menerangi malammu\n", fptr);
+
+  // tutup file
+  fclose(fptr);
+
+  return 0;
+}
+```
+
+Untuk menulis dan membaca file secara bersamaan, kita bisa menggunakan mode yang menggabungkan keduanya, misalnya "w+" untuk write dan read. Dengan mode ini, kita bisa menulis teks ke file dan kemudian membacanya kembali.
+
+Contoh kode untuk menulis dan membaca file puisi.txt:
+
+```c
+#include <stdio.h>
+
+int main() {
+  // buat pointer untuk file
+  FILE *fptr;
+
+  // buat variabel untuk menampung teks
+  char buff[255];
+
+  // buka file dengan mode write dan read
+  fptr = fopen("puisi.txt", "w+");
+
+  // cek apakah file berhasil dibuka
+  if (fptr == NULL) {
+    printf("File tidak bisa dibuka.\n");
+    return 1;
+  }
+
+  // tulis teks ke file
+  fputs("Aku ingin menjadi pelangi\n", fptr);
+  fputs("Yang mewarnai hidupmu\n", fptr);
+  fputs("Aku ingin menjadi bintang\n", fptr);
+  fputs("Yang menerangi malammu\n", fptr);
+
+  // kembalikan pointer file ke awal
+  rewind(fptr);
+
+  // baca dan tampilkan isi file
+  while (fgets(buff, sizeof(buff), fptr) != NULL) {
+    printf("%s", buff);
+  }
+
+  // tutup file
+  fclose(fptr);
+
+  return 0;
+}
+```
