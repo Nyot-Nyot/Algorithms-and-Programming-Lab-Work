@@ -11,7 +11,7 @@ This repository contains all programming algorithm practicum assignments. In thi
 🔢️ **NIM**: 23343035<br>
 🏫️ **major**: Informatics<br>
 
-## Assignment Module
+<h2 id="navigator">Assignment Module</h2>
 <list>
   <li><a href="#module1">Module 01 - Introduction to Algorithms and Programming</a></li>
   <li><a href="#module2">Module 02 - Basic C Programming</a></li>
@@ -36,6 +36,11 @@ This repository contains all programming algorithm practicum assignments. In thi
 - **Bahasa C**: Bahasa pemrograman untuk tujuan umum dan imperatif yang mendukung pemrograman terstruktur dan rekursif. C diciptakan oleh Dennis Ritchie pada tahun 1969-1973 di Bell Labs untuk mengembangkan sistem operasi Unix. C digunakan secara luas, portabel, fleksibel, dan berpengaruh terhadap banyak bahasa lain.
 
 - **IDE**: Integrated Development Environment, sebuah software yang membantu programmer untuk menulis, menguji, dan menjalankan kode dalam satu aplikasi. IDE memiliki banyak fitur, seperti text editor, compiler, debugger, syntax highlighting, code completion, dll. Beberapa contoh IDE adalah DevC++, Visual Studio Code, CodeBlocks, dll.
+
+---
+<div align="center">
+  <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
+</div>
 
 ---
 <h1 id="module2">Pemograman Dasar C</h1>
