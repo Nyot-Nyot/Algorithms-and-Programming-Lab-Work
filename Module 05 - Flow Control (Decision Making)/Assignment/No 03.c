@@ -1,3 +1,9 @@
+/*
+    Nama: Dzaki Sultan Rabbani
+    NIM: 23343035
+    Prodi: Informatika
+*/
+
 #include <stdio.h>
 
 const float phi = 3.14159265358979323846;

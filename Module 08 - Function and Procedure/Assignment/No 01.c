@@ -1,3 +1,9 @@
+/*
+    Nama: Dzaki Sultan Rabbani
+    NIM: 23343035
+    Prodi: Informatika
+*/
+
 #include <stdio.h>
 
 int Perkalian(int num1, int num2);
