@@ -16,7 +16,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="#module2">Module 02 - Basic C Programming</a></li>
   <li><a href="#module3">Module 03 - Variables, Constants, and Data Types</a></li>
   <li><a href="#module4">Module 04 - Operator</a></li>
-  <li><a href="Module 05 - Flow Control (Decision Making)">Module 05 - Flow Control (Decision Making)</a></li>
+  <li><a href="#module5">Module 05 - Flow Control (Decision Making)</a></li>
   <li><a href="Module 06 - Flow Control (Looping)">Module 06 - Flow Control (Looping)</a></li>
   <li><a href="Module 07 - Array">Module 07 - Array</a></li>
   <li><a href="Module 08 - Function and Procedure">Module 08 - Function and Procedure</a></li>
@@ -111,3 +111,55 @@ Operator bitwise adalah operator yang digunakan untuk melakukan operasi bit per 
 **Operator Lainnya**<br>
 Ada juga operator lain yang memiliki fungsi khusus dalam pemrograman, seperti operator alamat (`&`), operator pointer (`*`), operator increment (`++`), operator decrement (`--`), dan operator sizeof (`sizeof`). Operator-operator ini dapat membantu programmer untuk mengakses dan mengubah nilai variabel, pointer, dan tipe data.
 
+---
+<h2 id="#module5">Flow Control: Decision Making</h2>
+
+**Mengenal Flow Control dalam Pemrograman C**<br>
+Ketika kita belajar pemrograman, salah satu konsep penting yang harus dipahami adalah *flow control* atau kontrol aliran. Ini adalah cara kita memberi instruksi kepada komputer untuk mengambil keputusan dan menjalankan kode berdasarkan kondisi tertentu.
+
+**1. If Statement**<br>
+Ini adalah percabangan dasar. Jika kondisi terpenuhi, maka blok kode di dalamnya akan dijalankan. Misalnya, kita ingin memberikan diskon jika pembelian lebih dari Rp 100.000:
+
+```c
+if (totalBelanja > 100000) {
+    printf("Selamat, Anda dapat bonus diskon!");
+}
+```
+
+**2. If Else Statement**<br>
+Sedikit lebih kompleks, if else memungkinkan kita untuk menentukan aksi alternatif jika kondisi tidak terpenuhi:
+
+```c
+if (passwordBenar) {
+    printf("Selamat datang bos!");
+} else {
+    printf("Password salah, coba lagi!");
+}
+```
+
+**3. Switch Case**<br>
+Alternatif lain untuk if else if, switch case memudahkan kita dalam menangani banyak kondisi:
+
+```c
+switch (grade) {
+    case 'A':
+        printf("Luar biasa!");
+        break;
+    case 'B':
+    case 'C':
+        printf("Bagus!");
+        break;
+    default:
+        printf("Silakan coba lagi.");
+}
+```
+
+**4. Ternary Operator**
+Ini adalah bentuk singkat dari if else, sangat berguna untuk pengecekan kondisi sederhana dalam satu baris:
+
+```c
+int diskon = (totalBelanja > 100000) ? 10 : 0;
+```
+
+**5. Nested If**
+Kita juga bisa menempatkan if statement di dalam if lainnya, ini disebut nested if.
