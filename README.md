@@ -21,7 +21,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="#module6">Module 06 - Flow Control (Looping)</a></li>
   <li><a href="#module7">Module 07 - Array</a></li>
   <li><a href="#module8">Module 08 - Function and Procedure</a></li>
-  <li><a href="Module 09 - Pointer">Module 09 - Pointer</a></li>
+  <li><a href="#module9">Module 09 - Pointer</a></li>
   <li><a href="Module 10 - Enumeration and Structures">Module 10 - Enumeration and Structures</a></li>
   <li><a href="Module 11 - File Handling in C">Module 11 - File Handling in C</a></li>
 </list>
@@ -549,3 +549,230 @@ Hasil:
 Selamat datang di Github!
 Selamat datang di Github!
 ```
+---
+<h1 id="module9">Pointer</h1>
+
+### Apa itu Pointer?
+
+Pointer adalah sebuah variabel yang berisi alamat memori dari variabel lain. Alamat memori adalah lokasi di mana data disimpan di dalam RAM (Random Access Memory). Setiap variabel yang kita buat di program pasti punya alamat memori sendiri-sendiri. Kita bisa melihat alamat memori dari sebuah variabel dengan menggunakan simbol & (ampersand) di depan namanya.
+
+Misalnya, kita punya variabel umur dan tinggi dengan nilai masing-masing 20 dan 170. Kita bisa melihat alamat memori dari kedua variabel ini dengan kode berikut:
+
+```c
+#include <stdio.h>
+
+int main() {
+  int umur = 20;
+  int tinggi = 170;
+
+  printf("Alamat memori variabel umur adalah %x\n", &umur);
+  printf("Alamat memori variabel tinggi adalah %x\n", &tinggi);
+
+  return 0;
+}
+```
+
+Hasil outputnya mungkin seperti ini:
+
+```
+Alamat memori variabel umur adalah 61ff04
+Alamat memori variabel tinggi adalah 61ff00
+```
+
+Perhatikan bahwa alamat memori ditampilkan dalam format heksadesimal (bilangan basis 16) dengan menggunakan %x sebagai format specifier. Alamat memori ini bisa berbeda-beda tergantung pada komputer dan sistem operasi yang digunakan.
+
+Nah, pointer adalah variabel yang isinya adalah alamat memori dari variabel lain. Pointer dibuat dengan menambahkan simbol * (asterisk) di depan namanya. Misalnya, kita bisa membuat pointer yang mengacu pada variabel umur dengan kode berikut:
+
+```c
+int *pointer_umur; // deklarasi pointer
+pointer_umur = &umur; // inisialisasi pointer dengan alamat memori variabel umur
+```
+
+Dengan demikian, pointer_umur akan berisi alamat memori dari variabel umur, yaitu 61ff04. Kita bisa menampilkan isi pointer dengan menggunakan %x sebagai format specifier, sama seperti alamat memori.
+
+```c
+printf("Isi pointer_umur adalah %x\n", pointer_umur);
+```
+
+Hasil outputnya:
+
+```
+Isi pointer_umur adalah 61ff04
+```
+
+Kita juga bisa menampilkan alamat memori dari pointer itu sendiri dengan menggunakan simbol & di depan namanya. Misalnya:
+
+```c
+printf("Alamat memori pointer_umur adalah %x\n", &pointer_umur);
+```
+
+Hasil outputnya mungkin seperti ini:
+
+```
+Alamat memori pointer_umur adalah 61fefc
+```
+
+Perhatikan bahwa alamat memori pointer_umur berbeda dengan alamat memori umur. Ini karena pointer_umur adalah variabel yang berbeda dengan umur, meskipun isinya sama.
+
+### Lalu, Pointer untuk Apa?
+
+Pointer berguna untuk mengakses dan mengubah data yang ada di alamat memori tertentu. Dengan pointer, kita bisa mengakses data tanpa harus menggunakan nama variabel aslinya. Kita bisa menggunakan simbol * di depan nama pointer untuk mengakses data yang ada di alamat memori yang ditunjuk oleh pointer. Simbol * ini disebut dereference operator.
+
+Misalnya, kita bisa menampilkan nilai dari variabel umur dengan menggunakan pointer_umur sebagai berikut:
+
+```c
+printf("Nilai umur adalah %d\n", *pointer_umur);
+```
+
+Hasil outputnya:
+
+```
+Nilai umur adalah 20
+```
+
+Kita juga bisa mengubah nilai dari variabel umur dengan menggunakan pointer_umur sebagai berikut:
+
+```c
+*pointer_umur = 25; // mengubah nilai umur menjadi 25
+printf("Nilai umur sekarang adalah %d\n", umur); // menampilkan nilai umur
+```
+
+Hasil outputnya:
+
+```
+Nilai umur sekarang adalah 25
+```
+
+Dengan demikian, kita bisa mengakses dan mengubah data yang ada di alamat memori tertentu dengan menggunakan pointer. Ini berguna untuk beberapa hal, seperti:
+
+- Menghemat memori. Dengan pointer, kita tidak perlu membuat variabel baru untuk menyimpan data yang sama. Kita cukup membuat pointer yang mengacu pada alamat memori dari variabel yang sudah ada.
+- Membuat struktur data dinamis. Dengan pointer, kita bisa membuat struktur data yang bisa berubah ukuran dan bentuknya sesuai dengan kebutuhan, seperti linked list, tree, graph, dan sebagainya.
+- Melakukan pass by reference. Dengan pointer, kita bisa mengirimkan alamat memori dari sebuah variabel ke dalam fungsi, sehingga fungsi bisa mengubah nilai variabel tersebut secara langsung. Ini berbeda dengan pass by value, di mana fungsi hanya menerima salinan nilai variabel, sehingga perubahan yang terjadi di dalam fungsi tidak mempengaruhi variabel aslinya.
+
+### Bagaimana Contoh Penggunaan Pointer dalam Pemrograman C?
+
+Berikut adalah beberapa contoh penggunaan pointer dalam pemrograman C:
+
+#### Pointer untuk Pass by Reference
+
+Misalnya, kita ingin membuat sebuah fungsi yang menambahkan nilai dari sebuah variabel dengan 5. Jika kita menggunakan pass by value, maka fungsi tersebut akan menerima salinan nilai variabel, sehingga perubahan yang terjadi di dalam fungsi tidak mempengaruhi variabel aslinya. Contohnya:
+
+```c
+#include <stdio.h>
+
+// fungsi untuk menambahkan nilai dengan 5
+void add_score(int score) {
+  score = score + 5;
+  printf("Nilai score di dalam fungsi adalah %d\n", score);
+}
+
+int main() {
+  int score = 0; // variabel score dengan nilai awal 0
+  printf("Nilai score sebelum fungsi dipanggil adalah %d\n", score);
+  add_score(score); // memanggil fungsi dengan pass by value
+  printf("Nilai score setelah fungsi dipanggil adalah %d\n", score);
+  return 0;
+}
+```
+
+Hasil outputnya:
+
+```
+Nilai score sebelum fungsi dipanggil adalah 0
+Nilai score di dalam fungsi adalah 5
+Nilai score setelah fungsi dipanggil adalah 0
+```
+
+Perhatikan bahwa nilai score setelah fungsi dipanggil masih 0, karena fungsi hanya menerima salinan nilai score, bukan alamat memori dari score.
+
+Jika kita ingin fungsi bisa mengubah nilai score secara langsung, maka kita harus menggunakan pointer untuk melakukan pass by reference. Caranya adalah dengan mengubah tipe data parameter fungsi menjadi pointer, dan mengirimkan alamat memori dari variabel yang ingin diubah ke dalam fungsi. Contohnya:
+
+```c
+#include <stdio.h>
+
+// fungsi untuk menambahkan nilai dengan 5
+void add_score(int *score) {
+  *score = *score + 5;
+  printf("Nilai score di dalam fungsi adalah %d\n", *score);
+}
+
+int main() {
+  int score = 0; // variabel score dengan nilai awal 0
+  printf("Nilai score sebelum fungsi dipanggil adalah %d\n", score);
+  add_score(&score); // memanggil fungsi dengan pass by reference
+  printf("Nilai score setelah fungsi dipanggil adalah %d\n", score);
+  return 0;
+}
+```
+
+Hasil outputnya:
+
+```
+Nilai score sebelum fungsi dipanggil adalah 0
+Nilai score di dalam fungsi adalah 5
+Nilai score setelah fungsi dipanggil adalah 5
+```
+
+Perhatikan bahwa nilai score setelah fungsi dipanggil berubah menjadi 5, karena fungsi menerima alamat memori dari score, dan mengubah nilai yang ada di alamat memori tersebut.
+
+
+#### Pointer untuk Mengakses Array Multidimensi
+
+Array multidimensi adalah array yang memiliki lebih dari satu dimensi, seperti array dua dimensi (matriks) atau array tiga dimensi (kubus). Pointer juga bisa digunakan untuk mengakses elemen array multidimensi, dengan cara yang sedikit berbeda dari array satu dimensi.
+
+Misalnya, kita punya array dua dimensi dengan ukuran 3x3 yang berisi angka-angka. Kita bisa membuat pointer yang menunjuk ke elemen pertama array dengan kode berikut:
+
+```c
+int numbers[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; // array dua dimensi dengan 3 baris dan 3 kolom
+int (*ptr_current)[3]; // pointer untuk menunjuk ke elemen array
+
+ptr_current = numbers; // menginisialisasi pointer dengan alamat elemen pertama array
+```
+
+Perhatikan bahwa kita harus menambahkan tanda kurung di sekitar nama pointer dan ukuran kolom array, agar compiler mengerti bahwa kita ingin membuat pointer ke array, bukan array dari pointer. Jika kita tidak menambahkan tanda kurung, maka compiler akan menganggap bahwa kita ingin membuat array dari pointer, yang berarti kita harus mengalokasikan memori untuk setiap pointer di dalam array.
+
+Untuk mengakses elemen array, kita bisa menggunakan operator dereference (*) dan operator indeks ([]). Misalnya, kita bisa menampilkan elemen pertama array dengan kode berikut:
+
+```c
+printf("Elemen pertama array adalah %d\n", *ptr_current[0]);
+```
+
+Hasil outputnya:
+
+```
+Elemen pertama array adalah 1
+```
+
+Perhatikan bahwa kita harus menambahkan indeks 0 setelah nama pointer, karena pointer menunjuk ke array, bukan elemen array. Jika kita tidak menambahkan indeks 0, maka kita akan mengakses alamat memori dari array, bukan nilai dari elemen array.
+
+Untuk berpindah ke elemen selanjutnya, kita bisa menggunakan operator aritmatika (+) atau operator increment (++) pada pointer. Misalnya, kita bisa berpindah ke baris kedua array dengan kode berikut:
+
+```c
+ptr_current++; // menambahkan nilai pointer dengan 1
+```
+
+Dengan demikian, pointer akan menunjuk ke alamat memori dari baris kedua array. Kita bisa menampilkan elemen pertama dari baris kedua array dengan kode berikut:
+
+```c
+printf("Elemen pertama dari baris kedua array adalah %d\n", *ptr_current[0]);
+```
+
+Hasil outputnya:
+
+```
+Elemen pertama dari baris kedua array adalah 4
+```
+
+Untuk berpindah ke kolom selanjutnya, kita bisa menambahkan indeks pada operator dereference. Misalnya, kita bisa berpindah ke kolom kedua dari baris kedua array dengan kode berikut:
+
+```c
+printf("Elemen kedua dari baris kedua array adalah %d\n", *ptr_current[1]);
+```
+
+Hasil outputnya:
+
+```
+Elemen kedua dari baris kedua array adalah 5
+```
+
+Dengan cara ini, kita bisa mengakses semua elemen array multidimensi dengan menggunakan pointer. Kita juga bisa menggunakan pointer untuk mengubah nilai dari elemen array, dengan cara yang sama seperti array satu dimensi.
