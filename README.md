@@ -112,7 +112,7 @@ Operator bitwise adalah operator yang digunakan untuk melakukan operasi bit per 
 Ada juga operator lain yang memiliki fungsi khusus dalam pemrograman, seperti operator alamat (`&`), operator pointer (`*`), operator increment (`++`), operator decrement (`--`), dan operator sizeof (`sizeof`). Operator-operator ini dapat membantu programmer untuk mengakses dan mengubah nilai variabel, pointer, dan tipe data.
 
 ---
-<h2 id="#module5">Flow Control: Decision Making</h2>
+<h2 id="module5">Flow Control: Decision Making</h2>
 
 **Mengenal Flow Control dalam Pemrograman C**<br>
 Ketika kita belajar pemrograman, salah satu konsep penting yang harus dipahami adalah *flow control* atau kontrol aliran. Ini adalah cara kita memberi instruksi kepada komputer untuk mengambil keputusan dan menjalankan kode berdasarkan kondisi tertentu.
