@@ -1,3 +1,4 @@
+![Banner](https://www.geeksforgeeks.org/wp-content/uploads/Clanguage.png)
 # Algorithms and Programming Lab Work
 
 ## Description
