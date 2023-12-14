@@ -1,4 +1,4 @@
-![Banner](https://www.geeksforgeeks.org/wp-content/uploads/Clanguage.png)
+![Banner](Nyot-Nyot/Algorithms-and-Programming-Lab-Work/Files/The c languange.png)
 # Algorithms and Programming Lab Work
 
 ## Description
