@@ -38,7 +38,7 @@ This repository contains all programming algorithm practicum assignments. In thi
 - **IDE**: Integrated Development Environment, sebuah software yang membantu programmer untuk menulis, menguji, dan menjalankan kode dalam satu aplikasi. IDE memiliki banyak fitur, seperti text editor, compiler, debugger, syntax highlighting, code completion, dll. Beberapa contoh IDE adalah DevC++, Visual Studio Code, CodeBlocks, dll.
 
 <div align="center">
-  <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
+  <a href="#navigator"><kbd> <br> Go Back <br> </kbd></a>
 </div>
 
 ---
