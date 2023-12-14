@@ -1,4 +1,4 @@
-![Banner](Nyot-Nyot/Algorithms-and-Programming-Lab-Work/Files/The c languange.png)
+![Banner](https://github.com/Nyot-Nyot/Algorithms-and-Programming-Lab-Work/blob/3fd52a9ad57038ca023129522970fd0ebaba0cec/Files/The%20c%20languange.png)
 # Algorithms and Programming Lab Work
 
 ## Description
