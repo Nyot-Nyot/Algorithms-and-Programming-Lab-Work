@@ -37,7 +37,6 @@ This repository contains all programming algorithm practicum assignments. In thi
 
 - **IDE**: Integrated Development Environment, sebuah software yang membantu programmer untuk menulis, menguji, dan menjalankan kode dalam satu aplikasi. IDE memiliki banyak fitur, seperti text editor, compiler, debugger, syntax highlighting, code completion, dll. Beberapa contoh IDE adalah DevC++, Visual Studio Code, CodeBlocks, dll.
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -66,7 +65,6 @@ Komentar dalam kode sangat berguna untuk menjelaskan fungsi dari baris kode tert
 **Proses Input & Output**<br>
 Dalam C, kita menggunakan fungsi seperti `printf()` dan `scanf()` untuk output dan input. `printf()` digunakan untuk mencetak teks ke layar, sementara `scanf()` digunakan untuk mengambil input dari pengguna.
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -93,7 +91,6 @@ Ada kata-kata tertentu dalam C yang punya makna khusus dan tidak bisa digunakan 
 **Konstanta**<br>
 Konstanta itu seperti variabel, tapi nilainya tetap dan tidak bisa diubah. Di C, kita bisa membuat konstanta dengan `#define` atau `const`.
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -127,7 +124,6 @@ Operator bitwise adalah operator yang digunakan untuk melakukan operasi bit per 
 **Operator Lainnya**<br>
 Ada juga operator lain yang memiliki fungsi khusus dalam pemrograman, seperti operator alamat (`&`), operator pointer (`*`), operator increment (`++`), operator decrement (`--`), dan operator sizeof (`sizeof`). Operator-operator ini dapat membantu programmer untuk mengakses dan mengubah nilai variabel, pointer, dan tipe data.
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -185,7 +181,6 @@ int diskon = (totalBelanja > 100000) ? 10 : 0;
 **5. Nested If**<br>
 Kita juga bisa menempatkan if statement di dalam if lainnya, ini disebut nested if.
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -230,7 +225,6 @@ for(int i = 0; i < 5; i++) {
 }
 ```
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -329,7 +323,6 @@ char s[6] = "Hello";
 
 Perhatikan bahwa ukuran array harus satu lebih besar dari panjang string, karena string selalu diakhiri dengan karakter null (\0) yang menandakan akhir string.
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -586,7 +579,6 @@ Selamat datang di Github!
 Selamat datang di Github!
 ```
 
----
 <div align="center">
   <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
 </div>
@@ -818,3 +810,7 @@ Elemen kedua dari baris kedua array adalah 5
 ```
 
 Dengan cara ini, kita bisa mengakses semua elemen array multidimensi dengan menggunakan pointer. Kita juga bisa menggunakan pointer untuk mengubah nilai dari elemen array, dengan cara yang sama seperti array satu dimensi.
+
+<div align="center">
+  <kbd> <br> <a href="#navigator">Go Back</a> <br> </kbd>
+</div>
