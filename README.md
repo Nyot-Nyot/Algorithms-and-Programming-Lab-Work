@@ -814,3 +814,195 @@ Dengan cara ini, kita bisa mengakses semua elemen array multidimensi dengan meng
 <div align="center">
   <a href="#navigator"><kbd> <br> Go Back <br> </kbd></a>
 </div>
+
+---
+<h1 id="module10">Enumerasi & Struct</h1>
+
+**Enum** adalah singkatan dari enumeration, yang berarti penyebutan atau penomoran. Enum adalah tipe data yang berisi kumpulan konstanta yang sudah ditentukan sebelumnya. Konstanta adalah nilai tetap yang tidak bisa diubah. Enum berguna untuk membuat kode lebih mudah dibaca dan dimengerti, karena kita bisa menggunakan nama yang bermakna daripada angka atau karakter.
+
+Misalnya, kita ingin membuat program yang bisa menampilkan nama hari dalam seminggu. Kita bisa menggunakan enum untuk mendefinisikan konstanta untuk setiap hari, seperti ini:
+
+```c
+enum hari {SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU};
+```
+
+Dengan enum, kita bisa membuat variabel dengan tipe data hari, dan mengisinya dengan salah satu konstanta yang ada di enum. Contohnya:
+
+```c
+enum hari sekarang;
+sekarang = SELASA;
+printf("Hari ini adalah %d\n", sekarang);
+```
+
+Output:
+
+```
+Hari ini adalah 1
+```
+
+Perhatikan bahwa enum secara otomatis memberikan nilai numerik untuk setiap konstanta, dimulai dari 0. Jadi, SENIN = 0, SELASA = 1, dan seterusnya. Kita juga bisa menentukan nilai sendiri untuk konstanta, dengan cara menulis tanda sama dengan (=) dan nilai yang diinginkan. Contohnya:
+
+```c
+enum hari {SENIN = 1, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU};
+```
+
+Dengan cara ini, SENIN = 1, SELASA = 2, dan seterusnya. Nilai yang tidak ditentukan akan mengikuti nilai sebelumnya ditambah satu.
+
+Enum juga bisa digunakan untuk membuat tipe data boolean, yaitu tipe data yang hanya memiliki dua nilai, yaitu benar (true) atau salah (false). Bahasa C tidak memiliki tipe data boolean bawaan, jadi kita bisa membuatnya sendiri dengan enum, seperti ini:
+
+```c
+enum boolean {FALSE, TRUE};
+```
+
+Dengan enum boolean, kita bisa membuat variabel dengan tipe data boolean, dan mengisinya dengan FALSE atau TRUE. Contohnya:
+
+```c
+enum boolean status;
+status = TRUE;
+if (status == TRUE) {
+  printf("Status benar\n");
+} else {
+  printf("Status salah\n");
+}
+```
+
+Output:
+
+```
+Status benar
+```
+
+**Struct** adalah singkatan dari structure, yang berarti struktur atau susunan. Struct adalah tipe data yang berisi kumpulan variabel dengan berbagai tipe data yang dibungkus dalam satu variabel. Struct berguna untuk membuat kode lebih rapi dan terstruktur, karena kita bisa menyimpan data yang berkaitan dalam satu tempat.
+
+Misalnya, kita ingin membuat program yang bisa menyimpan data mahasiswa. Kita bisa menggunakan struct untuk mendefinisikan tipe data mahasiswa, yang berisi variabel-variabel seperti npm, nama, tgl_lahir, alamat, dan hp. Contohnya:
+
+```c
+struct mahasiswa {
+  int npm;
+  char *nama;
+  char *tgl_lahir;
+  char *alamat;
+  char *hp;
+};
+```
+
+Dengan struct, kita bisa membuat variabel dengan tipe data mahasiswa, dan mengisinya dengan data yang sesuai. Contohnya:
+
+```c
+struct mahasiswa mhs1;
+mhs1.npm = 10400570;
+mhs1.nama = "Muh. Rizki Putra";
+mhs1.tgl_lahir = "09-19-1980";
+mhs1.alamat = "Padang";
+mhs1.hp = "7874528";
+printf("NPM: %d\n", mhs1.npm);
+printf("Nama: %s\n", mhs1.nama);
+printf("Tanggal Lahir: %s\n", mhs1.tgl_lahir);
+printf("Alamat: %s\n", mhs1.alamat);
+printf("HP: %s\n", mhs1.hp);
+```
+
+Output:
+
+```
+NPM: 10400570
+Nama: Muh¹²[12]. Rizki Putra
+Tanggal Lahir: 09-19-1980
+Alamat: Padang
+HP: 7874528
+```
+
+Perhatikan bahwa struct menggunakan tanda titik (.) untuk mengakses variabel yang ada di dalamnya. Kita juga bisa menggunakan tanda panah (->) jika kita menggunakan pointer untuk struct. Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Contohnya:
+
+```c
+struct mahasiswa *mhs2;
+mhs2 = &mhs1; //mengambil alamat memori dari mhs1
+printf("NPM: %d\n", mhs2->npm);
+printf("Nama: %s\n", mhs2->nama);
+printf("Tanggal Lahir: %s\n", mhs2->tgl_lahir);
+printf("Alamat: %s\n", mhs2->alamat);
+printf("HP: %s\n", mhs2->hp);
+```
+
+Output:
+
+```
+NPM: 10400570
+Nama: Muh¹²[12]. Rizki Putra
+Tanggal Lahir: 09-19-1980
+Alamat: Padang
+HP: 7874528
+```
+
+Struct juga bisa digunakan dengan kata kunci typedef, yang berfungsi untuk membuat alias atau nama lain untuk tipe data. Dengan typedef, kita bisa membuat nama baru untuk struct, sehingga kita tidak perlu menulis kata struct lagi saat membuat variabel. Contohnya:
+
+```c
+typedef struct mahasiswa mhs; //membuat alias mhs untuk struct mahasiswa
+mhs mhs3; //membuat variabel dengan tipe data mhs
+mhs3.npm = 10400572;
+mhs3.nama = "Pratama Sutisna";
+mhs3.tgl_lahir = "11-08-1978";
+mhs3.alamat = "Pariaman";
+mhs3.hp = "7987555";
+printf("NPM: %d\n", mhs3.npm);
+printf("Nama: %s\n", mhs3.nama);
+printf("Tanggal Lahir: %s\n", mhs3.tgl_lahir);
+printf("Alamat: %s\n", mhs3.alamat);
+printf("HP: %s\n", mhs3.hp);
+```
+
+Output:
+
+```
+NPM: 10400572
+Nama: Pratama Sutisna
+Tanggal Lahir: 11-08-1978
+Alamat: Pariaman
+HP: 7987555
+```
+
+Struct juga bisa dibuat bersarang, yaitu ada struct di dalam struct. Hal ini berguna untuk membuat data yang lebih kompleks dan terkait. Contohnya:
+
+```c
+typedef struct tanggal {
+  int tahun;
+  int bulan;
+  int hari;
+} tgl; //membuat alias tgl untuk struct tanggal
+
+typedef struct mahasiswa {
+  int npm;
+  char *nama;
+  tgl tgl_lahir; //membuat variabel dengan tipe data tgl
+  char *alamat;
+  char *hp;
+} mhs; //membuat alias mhs untuk struct mahasiswa
+
+mhs mhs4; //membuat variabel dengan tipe data mhs
+mhs4.npm = 10400573;
+mhs4.nama = "Rina Sari";
+mhs4.tgl_lahir.tahun = 1980; //mengisi data tahun
+mhs4.tgl_lahir.bulan = 9; //mengisi data bulan
+mhs4.tgl_lahir.hari = 19; //mengisi data hari
+mhs4.alamat = "Bukittinggi";
+mhs4.hp = "7896543";
+printf("NPM: %d\n", mhs4.npm);
+printf("Nama: %s\n", mhs4.nama);
+printf("Tanggal Lahir: %d-%d-%d\n", mhs4.tgl_lahir.tahun, mhs4.tgl_lahir.bulan, mhs4.tgl_lahir.hari); //menampilkan data tanggal
+printf("Alamat: %s\n", mhs4.alamat);
+printf("HP: %s\n", mhs4.hp);
+```
+
+Output:
+
+```
+NPM: 10400573
+Nama: Rina Sari
+Tanggal Lahir: 1980-9-19
+Alamat: Bukittinggi
+HP: 7896543
+```
+
+<div align="center">
+  <a href="#navigator"><kbd> <br> Go Back <br> </kbd></a>
+</div>
