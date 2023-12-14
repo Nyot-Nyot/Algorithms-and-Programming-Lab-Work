@@ -19,7 +19,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="#module4">Module 04 - Operator</a></li>
   <li><a href="#module5">Module 05 - Flow Control (Decision Making)</a></li>
   <li><a href="#module6">Module 06 - Flow Control (Looping)</a></li>
-  <li><a href="Module 07 - Array">Module 07 - Array</a></li>
+  <li><a href="#module7">Module 07 - Array</a></li>
   <li><a href="Module 08 - Function and Procedure">Module 08 - Function and Procedure</a></li>
   <li><a href="Module 09 - Pointer">Module 09 - Pointer</a></li>
   <li><a href="Module 10 - Enumeration and Structures">Module 10 - Enumeration and Structures</a></li>
@@ -204,3 +204,97 @@ for(int i = 0; i < 5; i++) {
     printf("\n");
 }
 ```
+---
+<h2 id="module7">Array</h2>
+
+Array adalah salah satu struktur data yang sering digunakan dalam pemrograman. Array memungkinkan kita untuk menyimpan banyak data dalam satu tempat, dan mengaksesnya dengan mudah menggunakan indeks. Array juga bisa memiliki lebih dari satu dimensi, seperti matriks.
+
+Dalam bahasa pemrograman C, array dibuat dengan cara menentukan tipe data, nama variabel, dan ukuran array dalam kurung siku. Misalnya, untuk membuat array yang berisi 10 bilangan bulat, kita bisa menulis:
+
+```c
+int angka[10];
+```
+
+Untuk mengisi array dengan data, kita bisa menentukan nilainya secara langsung saat deklarasi, atau menggunakan perulangan. Misalnya, untuk mengisi array angka dengan bilangan 1 sampai 10, kita bisa menulis:
+
+```c
+int angka[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; // cara langsung
+```
+atau
+```c
+int angka[10]; // cara perulangan
+for (int i = 0; i < 10; i++) {⁵[5]
+  angka[i] = i + 1;
+}
+```
+
+Untuk mengakses data dalam array, kita bisa menggunakan indeksnya. Indeks array selalu dimulai dari nol, sehingga elemen pertama array memiliki indeks 0, elemen kedua memiliki indeks 1, dan seterusnya. Misalnya, untuk mencetak elemen kelima array angka, kita bisa menulis:
+
+```c
+printf("%d\n", angka[4]); // indeks 4 berarti elemen kelima
+```
+
+Untuk mengubah data dalam array, kita bisa menggunakan operator penugasan (=). Misalnya, untuk mengubah elemen kelima array angka menjadi 50, kita bisa menulis:
+
+```c
+angka[4] = 50;
+```
+
+Untuk menghitung panjang array, kita bisa menggunakan fungsi sizeof(), yang mengembalikan ukuran memori dari array. Karena ukuran memori tergantung pada tipe data dan ukuran pointer, kita perlu membaginya dengan ukuran pointer untuk mendapatkan panjang array. Misalnya, untuk mencetak panjang array angka, kita bisa menulis:
+
+```c
+int length = sizeof(angka) / sizeof(*angka); // panjang array
+printf("%d\n", length);
+```
+
+Untuk membuat array dua dimensi, kita perlu menentukan ukuran kedua dimensinya dalam kurung siku. Array dua dimensi biasanya digunakan untuk merepresentasikan matriks. Misalnya, untuk membuat array dua dimensi yang berisi 3 baris dan 4 kolom, kita bisa menulis:
+
+```c
+int matriks[3][4];
+```
+
+Untuk mengisi array dua dimensi dengan data, kita bisa menggunakan cara yang sama dengan array satu dimensi, yaitu secara langsung atau menggunakan perulangan. Misalnya, untuk mengisi array matriks dengan angka 1 sampai 12, kita bisa menulis:
+
+```c
+int matriks[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}; // cara langsung
+```
+atau
+```c
+int matriks[3][4]; // cara perulangan
+int angka = 1;
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 4; j++) {
+    matriks[i][j] = angka;
+    angka++;
+  }
+}
+```
+
+Untuk mengakses data dalam array dua dimensi, kita perlu menggunakan indeks untuk kedua dimensinya. Misalnya, untuk mencetak elemen baris kedua kolom ketiga array matriks, kita bisa menulis:
+
+```c
+printf("%d\n", matriks[1][2]); // indeks 1 dan 2 berarti baris kedua kolom ketiga
+```
+
+Untuk mengubah data dalam array dua dimensi, kita bisa menggunakan cara yang sama dengan array satu dimensi, yaitu menggunakan operator penugasan. Misalnya, untuk mengubah elemen baris kedua kolom ketiga array matriks menjadi 99, kita bisa menulis:
+
+```c
+matriks[1][2] = 99;
+```
+
+Untuk menghitung panjang array dua dimensi, kita bisa menggunakan fungsi sizeof() dengan cara yang sama dengan array satu dimensi, yaitu membagi ukuran memori dengan ukuran pointer. Namun, karena array dua dimensi memiliki dua ukuran, kita perlu membagi lagi dengan ukuran dimensi kedua untuk mendapatkan panjang dimensi pertama. Misalnya, untuk mencetak panjang baris dan kolom array matriks, kita bisa menulis:
+
+```c
+int length = sizeof(matriks) / sizeof(*matriks); // panjang baris
+int width = sizeof(*matriks) / sizeof(**matriks); // panjang kolom
+printf("%d x %d\n", length, width);
+```
+
+String adalah array yang berisi karakter. String dibuat dengan cara menentukan tipe data char, nama variabel, dan ukuran array dalam kurung siku. Misalnya, untuk membuat string yang berisi "Hello", kita bisa menulis:
+
+```c
+char s[6] = "Hello";
+```
+
+Perhatikan bahwa ukuran array harus satu lebih besar dari panjang string, karena string selalu diakhiri dengan karakter null (\0) yang menandakan akhir string.
+
