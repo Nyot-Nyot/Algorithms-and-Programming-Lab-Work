@@ -154,12 +154,12 @@ switch (grade) {
 }
 ```
 
-**4. Ternary Operator**
+**4. Ternary Operator**<br>
 Ini adalah bentuk singkat dari if else, sangat berguna untuk pengecekan kondisi sederhana dalam satu baris:
 
 ```c
 int diskon = (totalBelanja > 100000) ? 10 : 0;
 ```
 
-**5. Nested If**
+**5. Nested If**<br>
 Kita juga bisa menempatkan if statement di dalam if lainnya, ini disebut nested if.
