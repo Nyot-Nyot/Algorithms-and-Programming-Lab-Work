@@ -17,7 +17,7 @@ This repository contains all programming algorithm practicum assignments. In thi
   <li><a href="#module3">Module 03 - Variables, Constants, and Data Types</a></li>
   <li><a href="#module4">Module 04 - Operator</a></li>
   <li><a href="#module5">Module 05 - Flow Control (Decision Making)</a></li>
-  <li><a href="Module 06 - Flow Control (Looping)">Module 06 - Flow Control (Looping)</a></li>
+  <li><a href="#module6">Module 06 - Flow Control (Looping)</a></li>
   <li><a href="Module 07 - Array">Module 07 - Array</a></li>
   <li><a href="Module 08 - Function and Procedure">Module 08 - Function and Procedure</a></li>
   <li><a href="Module 09 - Pointer">Module 09 - Pointer</a></li>
