@@ -163,3 +163,43 @@ int diskon = (totalBelanja > 100000) ? 10 : 0;
 
 **5. Nested If**<br>
 Kita juga bisa menempatkan if statement di dalam if lainnya, ini disebut nested if.
+
+---
+<h2 id="module6">Flow Control: Loop</h2>
+
+**Mengapa Loop itu Penting?**<br>
+Loop, atau perulangan, adalah konsep dasar dalam pemrograman yang memungkinkan kita menjalankan kode yang sama berulang kali. Bayangkan jika kita harus menulis kode untuk mencetak angka dari 1 hingga 10 secara manual—sangat tidak efisien, bukan? Nah, dengan loop, kita bisa melakukan ini hanya dengan beberapa baris kode!
+
+**Jenis-Jenis Loop**<br>
+Ada empat jenis loop utama dalam bahasa C:
+- **For Loop**: Ini adalah contoh dari counted loop, di mana kita tahu pasti berapa kali loop akan berjalan. Contohnya:
+```c
+for(int i = 0; i < 10; i++) {
+    printf("%d\n", i);
+}
+```
+- **While Loop**: Ini termasuk uncounted loop, yang berarti kita tidak tahu pasti berapa kali loop akan berjalan. Loop ini akan terus berjalan selama kondisi yang ditentukan masih terpenuhi. Contohnya:
+```c
+int i = 0;
+while(i < 10) {
+    printf("%d\n", i);
+    i++;
+}
+```
+- **Do While Loop**: Mirip dengan while loop, tetapi do while loop akan menjalankan kode di dalamnya setidaknya satu kali sebelum mengecek kondisi. Contohnya:
+```c
+int i = 0;
+do {
+    printf("%d\n", i);
+    i++;
+} while(i < 10);
+```
+- **Nested Loop**: Ini adalah loop di dalam loop. Sangat berguna untuk kasus seperti mencetak pola atau bekerja dengan array multidimensi. Contohnya:
+```c
+for(int i = 0; i < 5; i++) {
+    for(int j = 0; j <= i; j++) {
+        printf("*");
+    }
+    printf("\n");
+}
+```
